@@ -15,3 +15,19 @@ This tool relies on the RSA library for python.
 
 # Installing the required library on macOS
 - I'm poor. I dunno how that shit works. Figure it out, yourself.
+
+# Why?
+Well, some languages (mostly low-level ones) don't exactly have the easiest ways to use RSA. This tool makes it easier for you to use the rsa library in an easy way. It can also be used for simple manual encryption and decryption and key generation.
+
+# Examples
+## key generation
+Go ahead and write `./cli.py gen '{"bitsize":200}'` in your terminal (`python cli.py gen '{"bitsize":200}'` if you're on windows).
+The program will give you a json dictionary containing all values needed in order to create both public and private keys.
+
+## Encryption
+Go ahead and `./cli.py enc '{"e":[the e value that you got from the previous command], "n":[the n value that you got from the previous command], "data":"hello"}'` in your terminal (`python cli.py gen enc '{"e":[the e value that you got from the previous command], "n":[the n value that you got from the previous command], "data":"hello"}'` if you're on windows).
+The program will give you a base64 string containing the encrypted version of 'hello'.
+
+## Decryption
+Go ahead and `./cli.py dec '{"e":[the e value that you got from the previous command], "n":[the n value that you got from the previous command], "data":"[base64 string the program gave you]"}'` in your terminal (`python cli.py gen dec '{"e":[the e value that you got from the previous command], "n":[the n value that you got from the previous command], "data":"[base64 string the program gave you]"}'` if you're on windows).
+The program will give you 'hello'.
