@@ -5,5 +5,5 @@ This is a cli(commandline interface) RSA encryption/decryption/generation tool, 
 This tool relies on the RSA library for python.
 
 # Installing the required library on linux
-1- Make sure that you have python3 and pip3 installed.
-2- Write `python3 -m pip install rsa` in your terminal.
+- Make sure that you have python3 and pip3 installed.
+- Write `python3 -m pip install rsa` in your terminal.
